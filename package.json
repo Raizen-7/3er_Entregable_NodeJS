@@ -1,0 +1,32 @@
+{
+  "name": "entregable_3_node",
+  "version": "1.0.0",
+  "description": "Project deliverable to modul Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raizen-7/Entregable_3_Node.git"
+  },
+  "author": "Fermin Antonio Yanes Herrera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raizen-7/Entregable_3_Node/issues"
+  },
+  "homepage": "https://github.com/Raizen-7/Entregable_3_Node#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.25.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
