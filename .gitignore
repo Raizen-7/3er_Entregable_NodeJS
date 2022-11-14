@@ -1,2 +1,5 @@
+ //file node_modules
 node_modules
+
+// date sensitive in env
 .env
