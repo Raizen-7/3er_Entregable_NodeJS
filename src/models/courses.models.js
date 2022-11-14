@@ -2,7 +2,7 @@ const db = require("../utils/data.util");
 const { DataTypes } = require("sequelize");
 //const Users = require("./user.models"); videos y categorias
 
-const Curses = db.define("curses", {
+const Courses = db.define("courses", {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -22,4 +22,4 @@ const Curses = db.define("curses", {
   },
 });
 
-module.exports = Curses;
+module.exports = Courses;

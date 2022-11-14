@@ -1,9 +1,9 @@
 const db = require("../utils/data.util");
 const { DataTypes } = require("sequelize");
-const Curses = require("./curses.models");
+const Curses = require("./courses.models");
 const Users = require('./users.models') 
 
-const UserCurses = db.define( "user_curses",
+const UserCourses = db.define( "user_curses",
   {
     id: {
       autoIncrement: true,
@@ -35,4 +35,4 @@ const UserCurses = db.define( "user_curses",
   }
 );
 
-module.exports = UserCurses;
+module.exports = UserCourses;

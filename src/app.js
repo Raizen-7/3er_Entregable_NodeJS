@@ -1,6 +1,10 @@
 const express = require('express');
 const db = require('./utils/data.util');
 const initModels = require('./models/initModels');
+const userRoutes = require('./Routes/users.routes');
+const courseRoutes = require('./routes/courses.routes');
+const videosRoutes = require('./routes/videos.routes');
+
 
 const app = express();
 
@@ -17,5 +21,16 @@ db.sync({ force: false })
   .catch((error) => console.log(error));
 
 initModels();
+
+app.get("/", (req, res, next) => {
+  res.status(200).json({ messge: "ok" });
+  next();
+});
+
+//routes
+app.use("/api/v1", userRoutes);
+app.use("/api/v1", courseRoutes);
+app.use("/api/v1", videosRoutes);
+
 
 app.listen(PORT, () => console.log("server running on port" + PORT));

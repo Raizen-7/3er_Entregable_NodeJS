@@ -1,6 +1,6 @@
 const db = require("../utils/data.util");
 const { DataTypes } = require("sequelize");
-const Curses = require("./curses.models");// videos y categorias
+const Curses = require("./courses.models");// videos y categorias
 
 const Videos = db.define("videos", {
   id: {
@@ -24,6 +24,10 @@ const Videos = db.define("videos", {
     },
     field: "curse_id",
     allowNull: false,
+  },
+  status: {
+    type: DataTypes.STRING,
+    defaultValue: "active"
   },
 });
 

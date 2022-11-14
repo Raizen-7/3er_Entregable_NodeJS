@@ -1,5 +1,5 @@
 const Users = require('../models/users.models');
-const Curses = require('../models/curses.models');
+const Curses = require('../models/courses.models');
 const Categories = require('../models/categories.models');
 const UserCurses = require('../models/usersCourses.model');
 
@@ -48,7 +48,7 @@ class UserServices {
           throw error;
         }
     }
-    static async updateUser(updateData, id) {
+    static async update(updateData, id) {
         try {
           const result = await Users.update(updateData, {
             where: { id },
@@ -57,7 +57,7 @@ class UserServices {
         } catch (error) {
           throw error;
         }
-      }
+    }
 }
 
 module.exports = UserServices;
