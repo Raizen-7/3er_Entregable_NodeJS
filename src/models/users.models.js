@@ -10,7 +10,15 @@ const Users = db.define( "users",
       autoIncrement: true,
       allowNull: false,
     },
-    username: {
+    firstname: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    lastname: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -20,10 +28,6 @@ const Users = db.define( "users",
       validate: {
         isEmail: true,
       },
-      allowNull: false,
-    },
-    password: {
-      type: DataTypes.STRING,
       allowNull: false,
     },
   },

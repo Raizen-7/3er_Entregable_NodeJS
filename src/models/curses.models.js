@@ -16,20 +16,10 @@ const Curses = db.define("curses", {
   description: {
     type: DataTypes.STRING,
   },
-  iinstructor: {
+  instructor: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  //las referencias son de los videos y categorias
-//   userId: {
-//     type: DataTypes.INTEGER,
-//     references: {
-//       model: Users,
-//       key: "id",
-//     },
-//     field: "user_id",
-//     allowNull: false,
-//   },
 });
 
 module.exports = Curses;

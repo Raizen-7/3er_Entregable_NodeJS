@@ -11,15 +11,6 @@ const UserCurses = db.define( "user_curses",
       allowNull: false,
       type: DataTypes.INTEGER,
     },
-    curseId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: Curses,
-        key: "id",
-      },
-      field: "curse_id",
-    },
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -28,6 +19,15 @@ const UserCurses = db.define( "user_curses",
         key: "id",
       },
       field: "user_id",
+    },
+    curseId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: Curses,
+        key: "id",
+      },
+      field: "curse_id",
     },
   },
   {
