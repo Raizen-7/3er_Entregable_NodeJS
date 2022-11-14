@@ -1,5 +1,4 @@
 const Courses = require("../models/courses.models");
-
 const Videos = require("../models/videos.models");
 
 class VideosServices {
@@ -12,7 +11,7 @@ class VideosServices {
             async (course) =>
               await Courses.create({ courseId: course, videoId: id })
           );
-          return curseResult;
+          return videoResult;
         } catch (error) {
           throw error;
         }
